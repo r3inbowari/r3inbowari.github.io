@@ -1,0 +1,136 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>你的时光</title><meta name="description"><meta name="author" content="r3inbowari"><meta name="copyright" content="r3inbowari"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="dns-prefetch" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="dns-prefetch" href="https://fonts.googleapis.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="dns-prefetch" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="你的时光"><meta name="twitter:description"><meta name="twitter:image" content="https://avatars2.githubusercontent.com/u/30739857?s=460&amp;u=e3212f4a979c79bae074aba0aee2380735844eb8&amp;v=4"><meta property="og:type" content="website"><meta property="og:title" content="你的时光"><meta property="og:url" content="http://yoursite.com/"><meta property="og:site_name" content="你的时光"><meta property="og:description"><meta property="og:image" content="https://avatars2.githubusercontent.com/u/30739857?s=460&amp;u=e3212f4a979c79bae074aba0aee2380735844eb8&amp;v=4"><meta property="article:published_time" content="2021-01-13T20:32:35.554Z"><meta property="article:modified_time" content="2021-01-13T20:32:35.554Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><link rel="canonical" href="http://yoursite.com/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"I,LOVE,YOU","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: {"bookmark":{"message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"top-right"},
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false,
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isSidebar: false  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 5.3.0"></head><body><canvas class="fireworks"></canvas><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://avatars2.githubusercontent.com/u/30739857?s=460&amp;u=e3212f4a979c79bae074aba0aee2380735844eb8&amp;v=4" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">20</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><div class="full_page" id="nav" style="background-image: url(https://s1.ax1x.com/2020/05/22/YLKBVS.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">你的时光</a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="site-info"><h1 id="site_title">你的时光</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/r3inbowari" target="_blank" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a><a class="social-icon" href="mailto:invenleey@live.com" target="_blank" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a><a class="social-icon" href="/null.xml" target="_blank" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i></a></div></div><div id="scroll_down"><i class="fa fa-angle-down scroll-down-effects"></i></div></div><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/01/13/yuque/nginx%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/" title="nginx快速部署">     <img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="nginx快速部署"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/13/yuque/nginx%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/" title="nginx快速部署">nginx快速部署</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2021-01-13 19:54:18"><i class="fa fa-calendar" aria-hidden="true"></i>2021-01-13</time></div><div class="content">最简单的部署方法
+新建脚本 create.sh1234567891011121314#!/usr/bin/env bashif [ ! -d &#x27;./data&#x27; ]then    mkdir datafidocker run -dit --name name_add \--rest ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/01/13/yuque/vs2019%E4%B8%8Blua%E7%9A%84%E7%BC%96%E8%AF%91/" title="vs2019下lua的编译">     <img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vs2019下lua的编译"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/13/yuque/vs2019%E4%B8%8Blua%E7%9A%84%E7%BC%96%E8%AF%91/" title="vs2019下lua的编译">vs2019下lua的编译</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2021-01-13 14:00:57"><i class="fa fa-calendar" aria-hidden="true"></i>2021-01-13</time></div><div class="content">源码获取http://www.lua.org/download.html
+静态 lib 编译
+用 Windows 桌面向导 新建一个项目
+要选 Static Library(lib)
+删除默认生成的代码
+将获取的源码直接导入, 除开 lua.c 和 luac.c, 因为是静态 lib, 我们并不需要 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/01/11/yuque/ACID/" title="ACID">     <img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ACID"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/11/yuque/ACID/" title="ACID">ACID</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2021-01-11 18:35:02"><i class="fa fa-calendar" aria-hidden="true"></i>2021-01-11</time></div><div class="content">原子性、一致性、隔离性和持久性
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/01/09/yuque/C%E6%8C%87%E9%92%88%E7%9A%84%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97/" title="C指针的算术运算">     <img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C指针的算术运算"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/09/yuque/C%E6%8C%87%E9%92%88%E7%9A%84%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97/" title="C指针的算术运算">C指针的算术运算</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2021-01-09 18:06:54"><i class="fa fa-calendar" aria-hidden="true"></i>2021-01-09</time></div><div class="content">类型指针在执行算术运算时，移动的步长应该是对应类型占用空间的大小 sizeof
+12345678910#include &lt;stdio.h&gt;int main(void)&#123;    int a[] = &#123;0x01020304,2021&#125;;    int *b =  ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/12/25/yuque/%E5%80%92%E8%AE%A1%E6%97%B6365%E5%A4%A9/" title="倒计时365天">     <img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="倒计时365天"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/25/yuque/%E5%80%92%E8%AE%A1%E6%97%B6365%E5%A4%A9/" title="倒计时365天">倒计时365天</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-12-25 22:47:00"><i class="fa fa-calendar" aria-hidden="true"></i>2020-12-25</time></div><div class="content">时间曾给了我充裕的安全感, 而如今它即将消耗殆尽…
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/12/21/yuque/Git%E8%BF%9B%E8%A1%8CGPG%E7%AD%BE%E5%90%8D%E5%87%BA%E7%8E%B0%E6%89%BE%E4%B8%8D%E5%88%B0%E5%AF%86%E9%92%A5%E7%9A%84%E9%97%AE%E9%A2%98/" title="Git进行GPG签名出现找不到密钥的问题">     <img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Git进行GPG签名出现找不到密钥的问题"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/21/yuque/Git%E8%BF%9B%E8%A1%8CGPG%E7%AD%BE%E5%90%8D%E5%87%BA%E7%8E%B0%E6%89%BE%E4%B8%8D%E5%88%B0%E5%AF%86%E9%92%A5%E7%9A%84%E9%97%AE%E9%A2%98/" title="Git进行GPG签名出现找不到密钥的问题">Git进行GPG签名出现找不到密钥的问题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-12-21 03:51:04"><i class="fa fa-calendar" aria-hidden="true"></i>2020-12-21</time></div><div class="content">
+
+问题Windows 平台下, Kleopatra 生成的 GPG 在使用 Git 进行签名时出现无法签名的问题附: 签名过程: 本地使用私钥签名 -&gt; 托管平台使用公钥验证
+错误信息12345gpg: keybox &#x27;/c/Users/inven/.gnupg/pubring.k ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/10/03/yuque/AGEFANS%20%E5%8A%A0%E5%AF%86%E7%A0%B4%E8%A7%A3%E5%B0%9D%E8%AF%95/" title="AGEFANS 加密破解尝试">     <img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="AGEFANS 加密破解尝试"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/10/03/yuque/AGEFANS%20%E5%8A%A0%E5%AF%86%E7%A0%B4%E8%A7%A3%E5%B0%9D%E8%AF%95/" title="AGEFANS 加密破解尝试">AGEFANS 加密破解尝试</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-10-03 09:48:39"><i class="fa fa-calendar" aria-hidden="true"></i>2020-10-03</time></div><div class="content">
+在首次使用 fiddler 进行抓包分析
+得出该站视频源地址的获取流程如下
+
+进一步分析首页加载的 javascript 脚本，可以发现该网站引用了 jsjiami.com.v5 这个工具对部分 cookie 进行二次加密其核心部分为 s_runtimelib.js
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/10/03/yuque/%E6%8A%A2%E6%95%91%E4%B8%80%E4%B8%AATP_Link%E8%B7%AF%E7%94%B1/" title="抢救一个TP_Link路由">     <img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="抢救一个TP_Link路由"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/10/03/yuque/%E6%8A%A2%E6%95%91%E4%B8%80%E4%B8%AATP_Link%E8%B7%AF%E7%94%B1/" title="抢救一个TP_Link路由">抢救一个TP_Link路由</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-10-03 09:40:12"><i class="fa fa-calendar" aria-hidden="true"></i>2020-10-03</time></div><div class="content">  
+下了个蠕虫病毒，差点被抓到  
+![832f45864fd1d7fe88249b82574879b.jpg](https://cdn.nlark.com/yuque/0/2020/jpeg/2582361/1601718059526-9c71e497-e8a2-4843-bcf2-e46dd2 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/10/03/yuque/%E9%80%9A%E4%BF%A1%E5%B7%A5%E7%A8%8B%E5%BA%94%E7%94%A8%E7%AB%9E%E8%B5%9B/" title="通信工程应用竞赛">     <img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="通信工程应用竞赛"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/10/03/yuque/%E9%80%9A%E4%BF%A1%E5%B7%A5%E7%A8%8B%E5%BA%94%E7%94%A8%E7%AB%9E%E8%B5%9B/" title="通信工程应用竞赛">通信工程应用竞赛</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-10-03 09:32:16"><i class="fa fa-calendar" aria-hidden="true"></i>2020-10-03</time></div><div class="content">
+
+
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/10/03/yuque/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%B0%E5%BD%95/" title="服务器记录">     <img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="服务器记录"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/10/03/yuque/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%B0%E5%BD%95/" title="服务器记录">服务器记录</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-10-03 09:29:09"><i class="fa fa-calendar" aria-hidden="true"></i>2020-10-03</time></div><div class="content">
+由于之前的服务器过期加之平时比较忙, 忘记进行数据迁移, 导致2020年之前的所有笔记资料都丢失了. 哭T T
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-fw fa-chevron-right" aria-hidden="true"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://avatars2.githubusercontent.com/u/30739857?s=460&amp;u=e3212f4a979c79bae074aba0aee2380735844eb8&amp;v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">r3inbowari</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">20</div></a></div></div><div class="card-info-bookmark is-center"><a class="bookmark button--primary button--animated" id="bookmark-it" href="javascript:;" title="加入书签" target="_self"><i class="fa fa-bookmark" aria-hidden="true"></i><span>加入书签</span></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/r3inbowari" target="_blank" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a><a class="social-icon" href="mailto:invenleey@live.com" target="_blank" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a><a class="social-icon" href="/null.xml" target="_blank" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i></a></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fa fa-history" aria-hidden="true"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/2021/01/13/yuque/nginx%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/"><div class="aside-post-cover"><img class="aside-post-bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="nginx快速部署" alt="nginx快速部署"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2021/01/13/yuque/nginx%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/" title="nginx快速部署">nginx快速部署</div><time class="aside-post_meta post-meta__date" title="发表于 2021-01-13 19:54:18">2021-01-13</time></div></a></div><div class="aside-recent-post"><a href="/2021/01/13/yuque/vs2019%E4%B8%8Blua%E7%9A%84%E7%BC%96%E8%AF%91/"><div class="aside-post-cover"><img class="aside-post-bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="vs2019下lua的编译" alt="vs2019下lua的编译"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2021/01/13/yuque/vs2019%E4%B8%8Blua%E7%9A%84%E7%BC%96%E8%AF%91/" title="vs2019下lua的编译">vs2019下lua的编译</div><time class="aside-post_meta post-meta__date" title="发表于 2021-01-13 14:00:57">2021-01-13</time></div></a></div><div class="aside-recent-post"><a href="/2021/01/11/yuque/ACID/"><div class="aside-post-cover"><img class="aside-post-bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="ACID" alt="ACID"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2021/01/11/yuque/ACID/" title="ACID">ACID</div><time class="aside-post_meta post-meta__date" title="发表于 2021-01-11 18:35:02">2021-01-11</time></div></a></div><div class="aside-recent-post"><a href="/2021/01/09/yuque/C%E6%8C%87%E9%92%88%E7%9A%84%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97/"><div class="aside-post-cover"><img class="aside-post-bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="C指针的算术运算" alt="C指针的算术运算"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2021/01/09/yuque/C%E6%8C%87%E9%92%88%E7%9A%84%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97/" title="C指针的算术运算">C指针的算术运算</div><time class="aside-post_meta post-meta__date" title="发表于 2021-01-09 18:06:54">2021-01-09</time></div></a></div><div class="aside-recent-post"><a href="/2020/12/25/yuque/%E5%80%92%E8%AE%A1%E6%97%B6365%E5%A4%A9/"><div class="aside-post-cover"><img class="aside-post-bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="倒计时365天" alt="倒计时365天"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/12/25/yuque/%E5%80%92%E8%AE%A1%E6%97%B6365%E5%A4%A9/" title="倒计时365天">倒计时365天</div><time class="aside-post_meta post-meta__date" title="发表于 2020-12-25 22:47:00">2020-12-25</time></div></a></div></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fa fa-archive" aria-hidden="true"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/10/"><span class="card-archive-list-date">十月 2020</span><span class="card-archive-list-count">8</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/09/"><span class="card-archive-list-date">九月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/05/"><span class="card-archive-list-date">五月 2020</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">四月 2020</span><span class="card-archive-list-count">1</span></a></li></ul></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2021 By r3inbowari</div><div class="framework-info"><span>驱动 </span><a target="_blank" rel="noopener" href="https://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@3/instantpage.min.js" type="module"></script><script src="/js/third-party/ClickShowText.js"></script><script src="https://cdn.jsdelivr.net/npm/typed.js"></script><script>var subtitleType = function () {
+  loadScript('https://sdk.jinrishici.com/v2/browser/jinrishici.js',function () {
+      var subtitleEffect = true
+      jinrishici.load(function (result) {
+        if (subtitleEffect) {
+          var sub = '世间好物不坚牢，彩云易散琉璃脆。'.length == 0 ? new Array() : '世间好物不坚牢，彩云易散琉璃脆。'.split(',')
+          var content = result.data.content
+          var both = sub.unshift(content)
+          var typed = new Typed('#subtitle', {
+            strings: sub,
+            startDelay: 300,
+            typeSpeed: 150,
+            loop: false,
+            backSpeed: 50,
+          })
+        } else {
+          document.getElementById('subtitle').innerHTML = result.data.content
+        }
+      })
+    }
+  )
+}
+window.addEventListener('load', subtitleType)
+</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hello, Yuque! | 你的时光</title><meta name="description" content="CI 持续集成从语雀同步文章到 Hexo 的实践https:&#x2F;&#x2F;blog.csdn.net&#x2F;zeli1511&#x2F;article&#x2F;details&#x2F;86561191https:&#x2F;&#x2F;www.yuque.com&#x2F;u46795&#x2F;blog&#x2F;dlloc7本条消息来自 语雀(Windows 10 x86_64 version: 0.3.11) 今天是第一天哦今天是第二天哦今天是第三天哦今天是第四天哦今天是第五天"><meta name="author" content="r3inbowari"><meta name="copyright" content="r3inbowari"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="dns-prefetch" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="dns-prefetch" href="https://fonts.googleapis.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="dns-prefetch" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Hello, Yuque!"><meta name="twitter:description" content="CI 持续集成从语雀同步文章到 Hexo 的实践https:&#x2F;&#x2F;blog.csdn.net&#x2F;zeli1511&#x2F;article&#x2F;details&#x2F;86561191https:&#x2F;&#x2F;www.yuque.com&#x2F;u46795&#x2F;blog&#x2F;dlloc7本条消息来自 语雀(Windows 10 x86_64 version: 0.3.11) 今天是第一天哦今天是第二天哦今天是第三天哦今天是第四天哦今天是第五天"><meta name="twitter:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><meta property="og:type" content="article"><meta property="og:title" content="Hello, Yuque!"><meta property="og:url" content="http://yoursite.com/2020/09/30/yuque/Hello,%20Yuque/"><meta property="og:site_name" content="你的时光"><meta property="og:description" content="CI 持续集成从语雀同步文章到 Hexo 的实践https:&#x2F;&#x2F;blog.csdn.net&#x2F;zeli1511&#x2F;article&#x2F;details&#x2F;86561191https:&#x2F;&#x2F;www.yuque.com&#x2F;u46795&#x2F;blog&#x2F;dlloc7本条消息来自 语雀(Windows 10 x86_64 version: 0.3.11) 今天是第一天哦今天是第二天哦今天是第三天哦今天是第四天哦今天是第五天"><meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><meta property="article:published_time" content="2020-09-30T03:12:21.000Z"><meta property="article:modified_time" content="2021-01-13T20:32:28.801Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><link rel="canonical" href="http://yoursite.com/2020/09/30/yuque/Hello,%20Yuque/"><link rel="prev" title="仙境传说主题音乐会" href="http://yoursite.com/2020/10/01/yuque/%E4%BB%99%E5%A2%83%E4%BC%A0%E8%AF%B4%E4%B8%BB%E9%A2%98%E9%9F%B3%E4%B9%90%E4%BC%9A/"><link rel="next" title="瑞幸" href="http://yoursite.com/2020/05/27/%E7%91%9E%E5%B9%B8/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"I,LOVE,YOU","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: {"bookmark":{"message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"top-right"},
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false,
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isSidebar: false  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 5.3.0"></head><body><canvas class="fireworks"></canvas><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://avatars2.githubusercontent.com/u/30739857?s=460&amp;u=e3212f4a979c79bae074aba0aee2380735844eb8&amp;v=4" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">20</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><div class="post-bg" id="nav" style="background-image: url(https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">你的时光</a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">Hello, Yuque!</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2020-09-30 03:12:21"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2020-09-30</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2021-01-13 20:32:28"><i class="fa fa-history" aria-hidden="true"></i> 更新于 2021-01-13</span></time></div><div class="meta-secondline"> </div><div class="meta-thirdline"><span class="post-meta-pv-cv"><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><meta name="referrer" content="no-referrer">
+
+<p>CI 持续集成从语雀同步文章到 Hexo 的实践<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/zeli1511/article/details/86561191">https://blog.csdn.net/zeli1511/article/details/86561191</a><br><a target="_blank" rel="noopener" href="https://www.yuque.com/u46795/blog/dlloc7">https://www.yuque.com/u46795/blog/dlloc7</a><br>本条消息来自 语雀(Windows 10 x86_64 version: 0.3.11)<br><img src="https://cdn.nlark.com/yuque/0/2020/jpeg/2582361/1601436348532-75d157b8-543e-4a17-9e48-d957a2c2bf9b.jpeg#align=left&display=inline&height=1049&margin=%5Bobject%20Object%5D&name=78557709_p0.jpg&originHeight=1049&originWidth=1656&size=256164&status=done&style=none&width=1656" alt="78557709_p0.jpg"></p>
+<p>今天是第一天哦<br>今天是第二天哦<br>今天是第三天哦<br>今天是第四天哦<br>今天是第五天哦</p>
+<p>跳出的一堆坑</p>
+<ol>
+<li>语雀的 WebHook 调用 Https 是没有反应的</li>
+<li>Nero 大佬写的有些地方照着套会出问题，不能直接抄</li>
+<li>比如 yuqueConfig.login 指向的是组名，yuqueConfig.repo 指向的才是永久链接，不然会报 403 错误</li>
+<li>腾讯的 serverless 服务需要先添加 SLS 的角色，不然是不可以进行网关 API 添加的</li>
+<li>travis 指向的 repoid 建议使用 curl 进行获取</li>
+<li>travis init 需要安装 ruby，并且在 centos7 环境下需要使用 rvm 进行编译安装</li>
+<li>travis.yml 文件需要看改写 rsa 文件的路径</li>
+<li>travis.yml 的运行环境不选 NodeJS 8 ，不然可能会报语法错误哦</li>
+<li>travis 的安全策略在今年已经改了，需要使用 github-developer-token 进行登录，使用账号密码登录可能无效额</li>
+<li>rsa 的生成和作用需要弄明白</li>
+<li>大佬的全局邮箱没加引号</li>
+<li>语雀图片防盗链处理</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;referrer&quot;</span> <span class="attr">content</span>=<span class="string">&quot;no-referrer&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="13">
+<li>针布戳 😄</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/2582361/1601477258595-6739d4f3-b4ed-4cb1-97f9-a922192f38e5.png#align=left&display=inline&height=934&margin=%5Bobject%20Object%5D&name=image.png&originHeight=934&originWidth=1903&size=116467&status=done&style=none&width=1903" alt="image.png"></p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">r3inbowari</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yoursite.com/2020/09/30/yuque/Hello,%20Yuque/">http://yoursite.com/2020/09/30/yuque/Hello,%20Yuque/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yoursite.com" target="_blank">你的时光</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="post-qr-code__img" src="/images/wechat.png" alt="微信"/><div class="post-qr-code__desc">微信</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/2020/10/01/yuque/%E4%BB%99%E5%A2%83%E4%BC%A0%E8%AF%B4%E4%B8%BB%E9%A2%98%E9%9F%B3%E4%B9%90%E4%BC%9A/"><img class="prev_cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">仙境传说主题音乐会</div></div></a></div><div class="next-post pull_right"><a href="/2020/05/27/%E7%91%9E%E5%B9%B8/"><img class="next_cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">瑞幸</div></div></a></div></nav></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2021 By r3inbowari</div><div class="framework-info"><span>驱动 </span><a target="_blank" rel="noopener" href="https://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@3/instantpage.min.js" type="module"></script><script src="/js/third-party/ClickShowText.js"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
